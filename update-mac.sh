@@ -1,0 +1,1 @@
+brew update; brew upgrade; rustup update; conda update --all
