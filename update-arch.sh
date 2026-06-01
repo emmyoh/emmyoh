@@ -3,6 +3,10 @@ trap "exit" INT TERM; trap "kill 0" EXIT; sudo -v || exit $?; sleep 1; while tru
 rustup update
 flatpak update -y
 sudo snap refresh
+sudo pacman-key --refresh-keys
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+sudo pacman -Sy --needed archlinux-keyring --noconfirm
 sudo pacman --overwrite "*" -Syu --noconfirm
 paru -Sua --noconfirm
 paru --overwrite "*" -Syu --noconfirm
