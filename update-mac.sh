@@ -1,5 +1,6 @@
 #!/bin/bash
 trap "exit" INT TERM; trap "kill 0" EXIT; sudo -v || exit $?; sleep 1; while true; do sleep 60; sudo -nv; done 2>/dev/null &
+export HOMEBREW_NO_ASK=1
 brew update
 brew upgrade
 brew upgrade --cask
