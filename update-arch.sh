@@ -9,7 +9,8 @@ sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Sy --needed archlinux-keyring --noconfirm
 
-sudo pacman -Rns $(pacman -Qdtq) --noconfirm # Remove orphaned packages 
+sudo pacman -Rns $(pacman -Qdtq) --noconfirm # Remove orphaned packages
+sudo pacman -Sc --noconfirm # Clear uninstalled packages from cache
 sudo pacman --overwrite "*" -Syu --noconfirm
 paru -Sua --noconfirm
 paru --overwrite "*" -Syu --noconfirm
